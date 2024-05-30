@@ -8,10 +8,10 @@
     ":enablePreCommit",
     ":automergeDigest",
     ":automergeBranchPush",
-    "github>ullbergm/home-ops//.github/renovate/commitMessage.json5",
-    "github>ullbergm/home-ops//.github/renovate/labels.json5",
-    "github>ullbergm/home-ops//.github/renovate/semanticCommits.json5",
-    "github>ullbergm/home-ops//.github/renovate/allowedVersions.json5"
+    "github>ullbergm/hajimari//.github/renovate/commitMessage.json5",
+    "github>ullbergm/hajimari//.github/renovate/labels.json5",
+    "github>ullbergm/hajimari//.github/renovate/semanticCommits.json5",
+    "github>ullbergm/hajimari//.github/renovate/allowedVersions.json5"
   ],
   "platform": "github",
   "username": "chii-bot[bot]",
