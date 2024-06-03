@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"cmp"
 	"net/http"
 	"slices"
 
@@ -67,10 +68,15 @@ func (rs *appResource) ListApps(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		// Sort Apps alphabetically
+		// Sort by Location then by Name
 		slices.SortFunc(kubeApps[i].Apps, func(a, b models.App) int {
-			return utilStrings.CompareNormalized(a.Name, b.Name)
+			logger.Debug("Comparing: ", a.Name, " (", a.Location, ") and ", b.Name, " (", b.Location, ")")
+			return cmp.Or(
+				cmp.Compare(a.Location, b.Location),
+				cmp.Compare(utilStrings.NormalizeString(a.Name), utilStrings.NormalizeString(b.Name)),
+			)
 		})
+
 	}
 
 	apps = append(kubeApps, customApps...)
