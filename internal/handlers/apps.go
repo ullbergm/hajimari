@@ -11,6 +11,7 @@ import (
 	"github.com/ullbergm/hajimari/internal/hajimari/customapps"
 	"github.com/ullbergm/hajimari/internal/models"
 	"github.com/ullbergm/hajimari/internal/services"
+	"github.com/ullbergm/hajimari/internal/util/strings"
 	utilStrings "github.com/ullbergm/hajimari/internal/util/strings"
 )
 
@@ -62,7 +63,7 @@ func (rs *appResource) ListApps(w http.ResponseWriter, r *http.Request) {
 
 	for i, kubeAppGroup := range kubeApps {
 		for x, customAppGroup := range customApps {
-			if customAppGroup.Group == kubeAppGroup.Group {
+			if strings.NormalizeString(customAppGroup.Group) == strings.NormalizeString(kubeAppGroup.Group) {
 				kubeApps[i].Apps = append(kubeApps[i].Apps, customAppGroup.Apps...)
 				customApps = append(customApps[:x], customApps[x+1:]...)
 			}
