@@ -3,7 +3,8 @@ name: ci
 on:
   push:
     paths-ignore:
-      - "charts/hajimari/**"
+      - ".github/renovate.json5"
+      - ".github/renovate/**.json5"
 
 env:
   REGISTRY_IMAGE: ghcr.io/ullbergm/hajimari
