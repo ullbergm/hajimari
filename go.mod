@@ -7,7 +7,7 @@ toolchain go1.22.4
 require (
 	github.com/chi-middleware/logrus-logger v0.3.0
 	github.com/fsnotify/fsnotify v1.7.0
-	github.com/go-chi/chi/v5 v5.0.12
+	github.com/go-chi/chi/v5 v5.0.13
 	github.com/go-chi/cors v1.2.1
 	github.com/go-chi/render v1.0.3
 	github.com/matoous/go-nanoid/v2 v2.1.0
