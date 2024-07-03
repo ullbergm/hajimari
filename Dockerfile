@@ -1,4 +1,4 @@
-FROM docker.io/node:22.3-alpine AS build-frontend
+FROM docker.io/node:22.4-alpine AS build-frontend
 
 WORKDIR /build
 
@@ -10,7 +10,7 @@ RUN npm install
 
 RUN npm run build
 
-FROM docker.io/golang:1.22.4-alpine AS build
+FROM docker.io/golang:1.22.5-alpine AS build
 
 ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
