@@ -1,3 +1,7 @@
+**NOTE**: _This repository is no longer supported or updated by Magnus. Due to the inactivity in the upstream project and because I wanted to streamline adding support to additional object types, I started a new project from scratch with very similar goals - [Startpunkt](https://github.com/ullbergm/startpunkt/)._
+
+---
+
 <img src="assets/logo.png" align="left" width="144px"/>
 
 # Hajimari 🌅
